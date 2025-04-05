@@ -1,0 +1,48 @@
+ Main Idea (Ý tưởng chính):
+Bài toán yêu cầu kiểm tra xem một chuỗi s có phải là hồn anh của chuỗi t hay không. Hai chuỗi được gọi là hồn anh (anagram) nếu:
+
+Chúng có cùng độ dài.
+
+Tất cả các ký tự trong chuỗi s có cùng số lượng xuất hiện trong chuỗi t.
+
+Cách giải quyết:
+Kiểm tra độ dài của chuỗi:
+
+Nếu độ dài của hai chuỗi khác nhau, trả về false ngay lập tức.
+
+Dùng mảng count để đếm số lần xuất hiện của các ký tự:
+
+Duyệt qua từng ký tự của cả hai chuỗi s và t, tăng giá trị tại vị trí tương ứng của ký tự trong mảng count cho chuỗi s và giảm cho chuỗi t.
+
+Kiểm tra mảng count:
+
+Nếu mọi giá trị trong mảng count đều bằng 0, thì hai chuỗi là hồn anh, trả về true.
+
+Nếu có bất kỳ giá trị nào khác 0, nghĩa là hai chuỗi không phải là hồn anh, trả về false.
+
+🧾 Ví dụ minh họa:
+Ví dụ 1:
+cpp
+Sao chép
+Chỉnh sửa
+s = "anagram", t = "nagaram"
+→ Độ dài bằng nhau, và số lần xuất hiện của các ký tự là giống nhau.
+→ Kết quả: true
+Ví dụ 2:
+cpp
+Sao chép
+Chỉnh sửa
+s = "rat", t = "car"
+→ Độ dài bằng nhau nhưng số lần xuất hiện của các ký tự không giống nhau.
+→ Kết quả: false
+Ví dụ 3:
+cpp
+Sao chép
+Chỉnh sửa
+s = "hello", t = "oellh"
+→ Độ dài bằng nhau, và số lần xuất hiện của các ký tự là giống nhau.
+→ Kết quả: true
+✅ Kết luận:
+Mảng count giúp ta theo dõi sự xuất hiện của các ký tự một cách hiệu quả.
+
+Độ phức tạp thời gian của thuật toán là O(n), với n là số ký tự trong chuỗi (hoặc độ dài của chuỗi s hoặc t), vì chúng ta chỉ duyệt qua chuỗi một lần.
